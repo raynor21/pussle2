@@ -1,0 +1,132 @@
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+/*
+CSE 190 M, Spring 2009, Marty Stepp
+Homework 6 (Fifteen Puzzle) style sheet
+*/
+ 
+body {
+    background-color: white;
+    font-family: cursive;
+    font-size: 14pt;
+}
+ 
+#controls, #overall, #puzzlearea {
+    width: 400px;
+}
+ 
+#controls {
+    padding-top: 10px;
+    text-align: center;
+}
+ 
+h1 {
+    margin: 10px 0px;
+    text-align: center;
+}
+ 
+/* Used to center the puzzle. */
+#overall {
+    margin-left: auto;
+    margin-right: auto;
+}
+ 
+/* The area that holds the 15 puzzle pieces. */
+#puzzlearea {
+    font-family: sans-serif;
+    font-size: 32pt;
+    height: 400px;
+    padding: 0px;
+    position: relative;
+}
+ 
+/* This class should be applied to each of the 15 puzzle pieces. */
+.puzzlepiece {
+    background-image: url("http://i1.sndcdn.com/avatars-000033458893-ahwfgz-crop.jpg?16b9957");
+    border: 2px solid black;
+    height: 96px;
+    line-height: 96px;
+    position: absolute;
+    text-align: center;
+    vertical-align: middle;
+    width: 96px;
+}
+ 
+/* This class should be applied to a puzzle piece that can be moved. */
+.movablepiece:hover {
+    border-color: red;
+    color: #006600;
+    text-decoration: underline;
+}
+ 
+#w3c {
+    text-align: right;
+}
+ 
+#w3c img {
+    border: none;
+}
