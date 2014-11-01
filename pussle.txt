@@ -1,0 +1,81 @@
+window.onload = function()
+{
+    $("controls").onclick = shuffle;
+    
+    
+    var puzzlearea = $("puzzlearea").childNodes;
+    var blank = document.createElement("div");
+    
+    var id=1;
+    var m=1;
+    var x=0;
+    var y=0;
+    var r=3;
+    
+    for (var i = 3; i < puzzlearea.length; i=i+2)
+    {
+        puzzlearea[i].className='puzzlepiece';
+        puzzlearea[i].id=id+'';
+        id+=1;
+        
+    }
+    puzzlearea.appendChild(blank);
+    
+    
+    
+    //puzzlearea[16].id='16';
+    
+    for (var t = 0; t < 4; t++)
+    {
+        for (var l = 0; l < 4; l++)
+        {
+            y=100*(t);
+            x=100*(l);
+
+            $(m+"").style.top=y+'px';
+            $(m+"").style.left=x+'px';
+            m=m+1;
+            
+            puzzlearea[r].style.backgroundPosition=-x+"px"+" "+-y+"px";
+            r=r+2;
+        }
+    }
+  
+    
+    //for (var d = 3; d < puzzlearea.length; d=d+2)
+    for (var d = 0; d < puzzlearea.length; d=d+1)
+    {
+        puzzlearea[d].onclick = move;
+        puzzlearea[d].onmouseover = moveable;
+    }
+    
+   
+   
+};
+
+function move()
+{
+    
+    //this.style.top=parseInt(this.getStyle("top"),10) + 100 + "px"; 
+    //this.style.left = parseInt(this.getStyle("left"),10) + 100 + "px";
+    var a=this.style.top;
+    var b=this.style.left;
+    
+   
+}
+
+
+
+
+function moveable()
+{
+   this.addClassName(".movablepiece");
+}
+
+function shuffle()
+{
+        
+    $("controls").textContent = "Go!";
+    
+    
+}
